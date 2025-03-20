@@ -1,175 +1,316 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glossify Studio</title>
+    <title>Minonails</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/icons/fontawesome-free-6.7.2-web/css/all.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <h1>LOGO</h1>
+            <div class="img-logo">LOGO</div>
             <p>Mimonails by pucha</p>
         </div>
-        <nav>
-            <a href="#" class="nav-link" data-page="home">HOME</a>
-            <a href="#" class="nav-link" data-page="pricelist">PREISLISTE</a>
-            <a href="#" class="nav-link" data-page="contact">KONTAKT</a>
-            <a href="#" class="nav-link" data-page="gallery">GALERIE</a>
-            <a href="#" class="nav-link" data-page="deutsch">ENGLISH</a>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav-menu">
+            <a href="#home" class="nav-link">HOME</a>
+            <a href="#pricelist" class="nav-link">PRICE LIST</a>
+            <a href="#contact" class="nav-link">CONTACT</a>
+            <a href="#gallery" class="nav-link">GALLERY</a>
         </nav>
     </header>
 
     <main>
-        <!-- HOME PAGE -->
-        <section id="home" class="page">
+        <!-- HOME SECTION -->
+        <section id="home" class="content-section">
             <div class="book-section">
-                <a href="#" class="book-button">BOOK HERE</a>
+                <a href="https://www.fresha.com/de/a/mimonails-luzern-luzern-eisengasse-13-bm2z9f3n/all-offer?menu=true&pId=337347" class="book-button">
+                    <i class="fa-solid fa-calendar-days icon icon-booking"></i>
+                    <span>BOOK HERE</span>
+                </a>
             </div>
 
             <div class="about-section">
-                <h2>ÜBER UNS</h2>
+                <h2>ABOUT US</h2>
                 <div class="about-content">
-                    <p>Bei <em>MimoNails</em> stehen Sie im Mittelpunkt. Unser Ziel ist es, Ihnen ein verwöhnendes, erfrischendes und vollkommen entspanntes Erlebnis mit unseren professionellen Nagel- und Pediküre-Dienstleistungen zu bieten. Unser junges und freundliches Team sorgt für eine persönliche und entspannte Atmosphäre, in der Sie sich wohlfühlen können. Zudem stehen Ihnen <strong>kostenlose Parkplätze</strong> zur Verfügung, damit Ihr Besuch so bequem wie möglich ist.</p>
-                    <p>Egal, ob Sie eine schnelle Auffrischung oder eine luxuriöse Behandlung wünschen – wir möchten, dass Sie sich großartig fühlen. Lassen Sie sich von uns verwöhnen – <strong>Sie haben es verdient!</strong> Interessiert? <a href="#" class="get-in-touch">Kontaktieren Sie uns!</a></p>
+                    <p>At <em>MimoNails</em>, you are our top priority. Our goal is to provide you with a pampering,
+                        refreshing, and completely relaxing experience with our professional nail and pedicure services.
+                        Our young and friendly team creates a personal and comfortable atmosphere where you can feel at
+                        ease. Additionally, we offer <strong>free parking</strong> to make your visit as convenient as
+                        possible.</p>
+                    <p>Whether you need a quick touch-up or a luxurious treatment – we want you to feel amazing. Let us
+                        take care of you – <strong>you deserve it!</strong> Interested? <a href="#contact"
+                            class="get-in-touch">Contact us!</a></p>
                 </div>
             </div>
-            
 
             <div class="loyalty-card">
                 <img src="loyalty-card.jpg" alt="Glossify Loyalty Card" class="card-image">
             </div>
         </section>
 
-        <!-- PRICELIST PAGE -->
-        <section id="pricelist" class="page">
+        <!-- PRICELIST SECTION -->
+        <section id="pricelist" class="content-section">
             <h2>PREISLISTE</h2>
             <div class="price-list">
                 <div class="service-category">
+
                     <h3>Manicure</h3>
                     <div class="service-item">
-                        <span>Classic Manicure</span>
-                        <span>35€</span>
+                        <span>Klassic Maniküre</span>
+                        <span>45 €</span>
                     </div>
                     <div class="service-item">
-                        <span>Gel Manicure</span>
-                        <span>45€</span>
+                        <span>Mit Farbe</span>
+                        <span>60 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span> + French</span>
+                        <span> + 5 €</span>
+                    </div>
+
+                </div>
+
+                <div class="service-category">
+
+                    <h3>Pediküre</h3>
+                    <div class="service-item">
+                        <span>Klassic Pediküre</span>
+                        <span>60 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Mit Farbe Shellac</span>
+                        <span>85 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Pflege + Acryl/Gel</span>
+                        <span>130 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Nur Farbe Set</span>
+                        <span>60 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>+ French</span>
+                        <span>+ 5 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>+ Peel Hornhaut</span>
+                        <span>+ 10 €</span>
+                    </div>
+
+                </div>
+                <div class="service-category">
+
+                    <h3>Acrylic/Gel</h3>
+                    <div class="service-item">
+                        <span>Klassic (Neuset)</span>
+                        <span>80 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Klassic (Auffüllen)</span>
+                        <span>75 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>+ Farbe</span>
+                        <span>+ 5 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>+ Babyboomer</span>
+                        <span>+ 10 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>+ French</span>
+                        <span>+ 15 €</span>
+                    </div>
+
+                </div>
+                <div class="service-category">
+
+                    <h3>Extra</h3>
+                    <div class="service-item">
+                        <span>Acryl/Gel Ablösen</span>
+                        <span>25 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Shellac Ablösen</span>
+                        <span>20 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Extra Langer</span>
+                        <span>ab 5 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Design</span>
+                        <span>ab 3 €/Finger</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Reparatur</span>
+                        <span>10 €/Finger</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Reparatur mit Auffüllen</span>
+                        <span>ab 2 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Farbe Ändern</span>
+                        <span>40 €</span>
+                    </div>
+                    <div class="service-item">
+                        <span>Form Ändern</span>
+                        <span>5 €</span>
                     </div>
                 </div>
-            </div>
         </section>
 
-        <!-- CONTACT PAGE -->
-        <section id="contact" class="page">
-            <h2>KONTAKT</h2>
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="content-section">
+            <h2>CONTACT</h2>
             <div class="contact-info">
                 <p class="contact-text">
-                    Haben Sie Fragen oder spezielle Wünsche? Wir sind für Sie da! Wenden Sie sich an unser freundliches Team, wenn Sie Informationen benötigen oder einen Termin buchen möchten. Wir sorgen dafür, dass Ihr Erlebnis im Glossify Studio perfekt auf Sie abgestimmt ist. Wir freuen uns darauf, von Ihnen zu hören!
+                    Do you have any questions or special requests? We are here for you! Contact our friendly team if you
+                    need information or would like to book an appointment. We will ensure that your experience at
+                    Glossify Studio is perfectly tailored to you. We look forward to hearing from you!
                 </p>
-                
+
                 <div class="opening-hours">
-                    <h3>Öffnungszeiten</h3>
+                    <h3>Opening Hours</h3>
                     <div class="hours-grid">
                         <div class="hours-row">
-                            <span>Montag - Freitag</span>
-                            <span>9:00 - 19:00</span>
+                            <span>Monday - Friday</span>
+                            <span>9:00 AM - 7:00 PM</span>
                         </div>
                         <div class="hours-row">
-                            <span>Samstag</span>
-                            <span>9:00 - 17:00</span>
+                            <span>Saturday</span>
+                            <span>9:00 AM - 5:00 PM</span>
                         </div>
                         <div class="hours-row">
-                            <span>Sonntag</span>
-                            <span>geschlossen</span>
+                            <span>Sunday</span>
+                            <span>Closed</span>
                         </div>
                     </div>
                 </div>
-
                 <div class="contact-details">
-                    <p><a href="https://maps.google.com" target="_blank">Ruopigenpl. 16, 6015 Luzern</a></p>
+                    <p><a href="https://www.google.com/maps/place/Eisengasse+13,+6004+Luzern/@47.05278,8.306132,2902m/data=!3m1!1e3!4m6!3m5!1s0x478ffb9ee45f7ae9:0xa11c833859b11ef5!8m2!3d47.0527804!4d8.3061319!16s%2Fg%2F11c1x7r2nm?hl=sk&entry=ttu&g_ep=EgoyMDI1MDMxNi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
+                            target="_blank">Ruopigenpl. 16, 6015 Luzern</a></p>
                     <p><a href="tel:+044 599 27 89 ">044 599 27 89 </a></p>
                     <p><a href="mailto:mimonails@gmail.com">mimonails@gmail.com</a></p>
                 </div>
 
                 <div class="book-section">
-                    <a href="#" class="book-button">HIER BUCHEN</a>
+                    <a href="https://www.fresha.com/de/a/mimonails-luzern-luzern-eisengasse-13-bm2z9f3n/all-offer?menu=true&pId=337347" class="book-button">HIER BUCHEN</a>
                 </div>
             </div>
         </section>
 
-        <!-- GALLERY PAGE -->
-        <section id="gallery" class="page">
+        <!-- GALLERY SECTION -->
+        <section id="gallery" class="content-section">
             <h2>GALERIE</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/nail-1.jpg" alt="Classic French Manicure" loading="lazy">
+                    <img src="assets/images/gallery/b8907cc6-0c5f-47b8-b9a0-b9a6c43752b0.jpg"
+                        alt="Classic French Manicure" loading="lazy">
                     <div class="gallery-overlay">
                         <p>Classic French Manicure</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/nail-2.jpg" alt="Gel Extension" loading="lazy">
+                    <img src="assets/images/gallery/46d9f41e-2b2c-45cd-b204-758a1784e6e3.jpg" alt="Gel Extension"
+                        loading="lazy">
                     <div class="gallery-overlay">
                         <p>Gel Extension</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/nail-3.jpg" alt="Artistic Design" loading="lazy">
+                    <img src="assets/images/gallery/5fe4b829-9240-4744-9b59-4a8edb5db852.jpg" alt="Artistic Design"
+                        loading="lazy">
                     <div class="gallery-overlay">
                         <p>Artistic Design</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/nail-4.jpg" alt="Luxury Stones" loading="lazy">
+                    <img src="assets/images/gallery/24c3387b-a486-4aa5-addf-228242bf0e49.jpg" alt="Luxury Stones"
+                        loading="lazy">
                     <div class="gallery-overlay">
                         <p>Luxury Stones</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/nail-5.jpg" alt="Natural Look" loading="lazy">
+                    <img src="assets/images/gallery/b8907cc6-0c5f-47b8-b9a0-b9a6c43752b0.jpg"
+                        alt="Classic French Manicure" loading="lazy">
                     <div class="gallery-overlay">
-                        <p>Natural Look</p>
+                        <p>Classic French Manicure</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/nail-6.jpg" alt="Glitter Design" loading="lazy">
+                    <img src="assets/images/gallery/46d9f41e-2b2c-45cd-b204-758a1784e6e3.jpg" alt="Gel Extension"
+                        loading="lazy">
                     <div class="gallery-overlay">
-                        <p>Glitter Design</p>
+                        <p>Gel Extension</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/nail-7.jpg" alt="Summer Collection" loading="lazy">
+                    <img src="assets/images/gallery/5fe4b829-9240-4744-9b59-4a8edb5db852.jpg" alt="Artistic Design"
+                        loading="lazy">
                     <div class="gallery-overlay">
-                        <p>Summer Collection</p>
+                        <p>Artistic Design</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/nail-8.jpg" alt="Wedding Special" loading="lazy">
+                    <img src="assets/images/gallery/24c3387b-a486-4aa5-addf-228242bf0e49.jpg" alt="Luxury Stones"
+                        loading="lazy">
                     <div class="gallery-overlay">
-                        <p>Wedding Special</p>
+                        <p>Luxury Stones</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/5fe4b829-9240-4744-9b59-4a8edb5db852.jpg" alt="Artistic Design"
+                        loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Artistic Design</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/24c3387b-a486-4aa5-addf-228242bf0e49.jpg" alt="Luxury Stones"
+                        loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Luxury Stones</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/b8907cc6-0c5f-47b8-b9a0-b9a6c43752b0.jpg"
+                        alt="Classic French Manicure" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Classic French Manicure</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/b8907cc6-0c5f-47b8-b9a0-b9a6c43752b0.jpg"
+                        alt="Classic French Manicure" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Classic French Manicure</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- DEUTSCH PAGE -->
-        <section id="deutsch" class="page">
-            <h2>ENGLISH</h2>
-            <!-- English version content -->
         </section>
     </main>
 
     <footer>
         <div class="social-links">
-            <a href="#" class="social-link">Facebook</a>
-            <a href="#" class="social-link">TikTok</a>
-            <a href="#" class="social-link">Instagram</a>
-            <a href="#" class="social-link">WhatsApp</a>
-            <a href="#" class="social-link">Calendar</a>
+            <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fa-solid fa-phone"></i></a>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
+
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,17 +12,25 @@
 <body>
     <header>
         <div class="logo">
-            <div class="img-logo">LOGO</div>
+            <div class="img-logo">
+                <img src="assets/images/logo/Ảnh chụp màn hình 2025-03-20 195326.png" alt="">
+            </div>
             <p>Mimonails by pucha</p>
         </div>
-        <div class="mobile-menu-btn">
-            <i class="fas fa-bars"></i>
+        <div class="header-controls">
+            <button class="language-switcher" id="languageSwitcher">
+                <span class="current-lang">EN</span>
+                <i class="fas fa-globe"></i>
+            </button>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
         <nav class="nav-menu">
-            <a href="#home" class="nav-link">HOME</a>
-            <a href="#pricelist" class="nav-link">PRICE LIST</a>
-            <a href="#contact" class="nav-link">CONTACT</a>
-            <a href="#gallery" class="nav-link">GALLERY</a>
+            <a href="#home" class="nav-link" data-translate="home">HOME</a>
+            <a href="#pricelist" class="nav-link" data-translate="priceList">PRICE LIST</a>
+            <a href="#contact" class="nav-link" data-translate="contact">CONTACT</a>
+            <a href="#gallery" class="nav-link" data-translate="gallery">GALLERY</a>
         </nav>
     </header>
 
@@ -32,213 +40,217 @@
             <div class="book-section">
                 <a href="https://www.fresha.com/de/a/mimonails-luzern-luzern-eisengasse-13-bm2z9f3n/all-offer?menu=true&pId=337347" class="book-button">
                     <i class="fa-solid fa-calendar-days icon icon-booking"></i>
-                    <span>BOOK HERE</span>
+                    <span data-translate="bookHere">BOOK HERE</span>
                 </a>
             </div>
 
             <div class="about-section">
-                <h2>ABOUT US</h2>
+                <h2 data-translate="aboutUs">ABOUT US</h2>
                 <div class="about-content">
-                    <p>At <em>MimoNails</em>, you are our top priority. Our goal is to provide you with a pampering,
-                        refreshing, and completely relaxing experience with our professional nail and pedicure services.
-                        Our young and friendly team creates a personal and comfortable atmosphere where you can feel at
-                        ease. Additionally, we offer <strong>free parking</strong> to make your visit as convenient as
-                        possible.</p>
-                    <p>Whether you need a quick touch-up or a luxurious treatment – we want you to feel amazing. Let us
-                        take care of you – <strong>you deserve it!</strong> Interested? <a href="#contact"
-                            class="get-in-touch">Contact us!</a></p>
+                    <p data-translate="aboutText1">At MimoNails, you are our top priority. Our goal is to provide you with a pampering, refreshing, and completely relaxing experience with our professional nail and pedicure services. Our young and friendly team creates a personal and comfortable atmosphere where you can feel at ease. Additionally, we offer free parking to make your visit as convenient as possible.</p>
+                    <p data-translate="aboutText2">Whether you need a quick touch-up or a luxurious treatment – we want you to feel amazing. Let us take care of you – you deserve it! Interested? <a href="#contact" class="get-in-touch" data-translate="contactUs">Contact us!</a></p>
                 </div>
             </div>
 
             <div class="loyalty-card">
-                <img src="loyalty-card.jpg" alt="Glossify Loyalty Card" class="card-image">
+                <img src="assets/images/banner/37d23550-d0d6-4afc-b001-21c7228b1c61.webp" alt="Loyalty Card" class="card-image">
             </div>
         </section>
 
         <!-- PRICELIST SECTION -->
         <section id="pricelist" class="content-section">
-            <h2>PREISLISTE</h2>
+            <h2 data-translate="priceList">PRICE LIST</h2>
             <div class="price-list">
                 <div class="service-category">
-
-                    <h3>Manicure</h3>
-                    <div class="service-item">
-                        <span>Klassic Maniküre</span>
-                        <span>45 €</span>
+                    <div class="service-header">
+                        <h3 data-translate="manicure">Manicure</h3>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="service-item">
-                        <span>Mit Farbe</span>
-                        <span>60 €</span>
+                    <div class="service-content">
+                        <div class="service-item">
+                            <span data-translate="classicManicure">Classic Manicure</span>
+                            <span>45 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="withColor">With Color</span>
+                            <span>60 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="french">French</span>
+                            <span>+ 5 €</span>
+                        </div>
                     </div>
-                    <div class="service-item">
-                        <span> + French</span>
-                        <span> + 5 €</span>
-                    </div>
-
                 </div>
 
                 <div class="service-category">
-
-                    <h3>Pediküre</h3>
-                    <div class="service-item">
-                        <span>Klassic Pediküre</span>
-                        <span>60 €</span>
+                    <div class="service-header">
+                        <h3 data-translate="pedicure">Pedicure</h3>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="service-item">
-                        <span>Mit Farbe Shellac</span>
-                        <span>85 €</span>
+                    <div class="service-content">
+                        <div class="service-item">
+                            <span data-translate="classicPedicure">Classic Pedicure</span>
+                            <span>60 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="withColorShellac">With Color Shellac</span>
+                            <span>85 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="careAndAcrylicGel">Care + Acrylic/Gel</span>
+                            <span>130 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="colorSetOnly">Color Set Only</span>
+                            <span>60 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="french">French</span>
+                            <span>+ 5 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="peelCallus">Peel Callus</span>
+                            <span>+ 10 €</span>
+                        </div>
                     </div>
-                    <div class="service-item">
-                        <span>Pflege + Acryl/Gel</span>
-                        <span>130 €</span>
-                    </div>
-                    <div class="service-item">
-                        <span>Nur Farbe Set</span>
-                        <span>60 €</span>
-                    </div>
-                    <div class="service-item">
-                        <span>+ French</span>
-                        <span>+ 5 €</span>
-                    </div>
-                    <div class="service-item">
-                        <span>+ Peel Hornhaut</span>
-                        <span>+ 10 €</span>
-                    </div>
-
                 </div>
+
                 <div class="service-category">
-
-                    <h3>Acrylic/Gel</h3>
-                    <div class="service-item">
-                        <span>Klassic (Neuset)</span>
-                        <span>80 €</span>
+                    <div class="service-header">
+                        <h3 data-translate="acrylicGel">Acrylic/Gel</h3>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="service-item">
-                        <span>Klassic (Auffüllen)</span>
-                        <span>75 €</span>
+                    <div class="service-content">
+                        <div class="service-item">
+                            <span data-translate="classicNewSet">Classic (New Set)</span>
+                            <span>80 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="classicRefill">Classic (Refill)</span>
+                            <span>75 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="withColor">With Color</span>
+                            <span>+ 5 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="babyboomer">Babyboomer</span>
+                            <span>+ 10 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="french">French</span>
+                            <span>+ 15 €</span>
+                        </div>
                     </div>
-                    <div class="service-item">
-                        <span>+ Farbe</span>
-                        <span>+ 5 €</span>
-                    </div>
-                    <div class="service-item">
-                        <span>+ Babyboomer</span>
-                        <span>+ 10 €</span>
-                    </div>
-                    <div class="service-item">
-                        <span>+ French</span>
-                        <span>+ 15 €</span>
-                    </div>
-
                 </div>
+
                 <div class="service-category">
-
-                    <h3>Extra</h3>
-                    <div class="service-item">
-                        <span>Acryl/Gel Ablösen</span>
-                        <span>25 €</span>
+                    <div class="service-header">
+                        <h3 data-translate="extra">Extra</h3>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div class="service-item">
-                        <span>Shellac Ablösen</span>
-                        <span>20 €</span>
-                    </div>
-                    <div class="service-item">
-                        <span>Extra Langer</span>
-                        <span>ab 5 €</span>
-                    </div>
-                    <div class="service-item">
-                        <span>Design</span>
-                        <span>ab 3 €/Finger</span>
-                    </div>
-                    <div class="service-item">
-                        <span>Reparatur</span>
-                        <span>10 €/Finger</span>
-                    </div>
-                    <div class="service-item">
-                        <span>Reparatur mit Auffüllen</span>
-                        <span>ab 2 €</span>
-                    </div>
-                    <div class="service-item">
-                        <span>Farbe Ändern</span>
-                        <span>40 €</span>
-                    </div>
-                    <div class="service-item">
-                        <span>Form Ändern</span>
-                        <span>5 €</span>
+                    <div class="service-content">
+                        <div class="service-item">
+                            <span data-translate="removeAcrylicGel">Remove Acrylic/Gel</span>
+                            <span>25 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="removeShellac">Remove Shellac</span>
+                            <span>20 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="extraLong">Extra Long</span>
+                            <span>from 5 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="design">Design</span>
+                            <span>from 3 €/finger</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="repair">Repair</span>
+                            <span>10 €/finger</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="repairWithRefill">Repair with Refill</span>
+                            <span>from 2 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="changeColor">Change Color</span>
+                            <span>40 €</span>
+                        </div>
+                        <div class="service-item">
+                            <span data-translate="changeShape">Change Shape</span>
+                            <span>5 €</span>
+                        </div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- CONTACT SECTION -->
         <section id="contact" class="content-section">
-            <h2>CONTACT</h2>
+            <h2 data-translate="contact">CONTACT</h2>
             <div class="contact-info">
-                <p class="contact-text">
-                    Do you have any questions or special requests? We are here for you! Contact our friendly team if you
-                    need information or would like to book an appointment. We will ensure that your experience at
-                    Glossify Studio is perfectly tailored to you. We look forward to hearing from you!
+                <p class="contact-text" data-translate="contactText">
+                    Do you have any questions or special requests? We are here for you! Contact our friendly team if you need information or would like to book an appointment. We will ensure that your experience at Glossify Studio is perfectly tailored to you. We look forward to hearing from you!
                 </p>
 
                 <div class="opening-hours">
-                    <h3>Opening Hours</h3>
+                    <h3 data-translate="openingHours">Opening Hours</h3>
                     <div class="hours-grid">
                         <div class="hours-row">
-                            <span>Monday - Friday</span>
+                            <span data-translate="mondayFriday">Monday - Friday</span>
                             <span>9:00 AM - 7:00 PM</span>
                         </div>
                         <div class="hours-row">
-                            <span>Saturday</span>
+                            <span data-translate="saturday">Saturday</span>
                             <span>9:00 AM - 5:00 PM</span>
                         </div>
                         <div class="hours-row">
-                            <span>Sunday</span>
-                            <span>Closed</span>
+                            <span data-translate="sunday">Sunday</span>
+                            <span data-translate="closed">Closed</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="contact-details">
-                    <p><a href="https://www.google.com/maps/place/Eisengasse+13,+6004+Luzern/@47.05278,8.306132,2902m/data=!3m1!1e3!4m6!3m5!1s0x478ffb9ee45f7ae9:0xa11c833859b11ef5!8m2!3d47.0527804!4d8.3061319!16s%2Fg%2F11c1x7r2nm?hl=sk&entry=ttu&g_ep=EgoyMDI1MDMxNi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
-                            target="_blank">Ruopigenpl. 16, 6015 Luzern</a></p>
-                    <p><a href="tel:+044 599 27 89 ">044 599 27 89 </a></p>
-                    <p><a href="mailto:mimonails@gmail.com">mimonails@gmail.com</a></p>
+                    <p><span data-translate="address">Address</span>: <a href="https://www.google.com/maps/place/Eisengasse+13,+6004+Luzern/@47.05278,8.306132,2902m/data=!3m1!1e3!4m6!3m5!1s0x478ffb9ee45f7ae9:0xa11c833859b11ef5!8m2!3d47.0527804!4d8.3061319!16s%2Fg%2F11c1x7r2nm?hl=sk&entry=ttu&g_ep=EgoyMDI1MDMxNi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">Ruopigenpl. 16, 6015 Luzern</a></p>
+                    <p><span data-translate="phone">Phone</span>: <a href="tel:+044 599 27 89">044 599 27 89</a></p>
+                    <p><span data-translate="email">Email</span>: <a href="mailto:mimonails@gmail.com">mimonails@gmail.com</a></p>
                 </div>
 
                 <div class="book-section">
-                    <a href="https://www.fresha.com/de/a/mimonails-luzern-luzern-eisengasse-13-bm2z9f3n/all-offer?menu=true&pId=337347" class="book-button">HIER BUCHEN</a>
+                    <a href="https://www.fresha.com/de/a/mimonails-luzern-luzern-eisengasse-13-bm2z9f3n/all-offer?menu=true&pId=337347" class="book-button" data-translate="bookHere">BOOK HERE</a>
                 </div>
             </div>
         </section>
 
         <!-- GALLERY SECTION -->
         <section id="gallery" class="content-section">
-            <h2>GALERIE</h2>
+            <h2 data-translate="gallery">GALLERY</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/b8907cc6-0c5f-47b8-b9a0-b9a6c43752b0.jpg"
-                        alt="Classic French Manicure" loading="lazy">
+                    <img src="assets/images/gallery/b8907cc6-0c5f-47b8-b9a0-b9a6c43752b0.jpg" alt="Classic French Manicure" loading="lazy">
                     <div class="gallery-overlay">
-                        <p>Classic French Manicure</p>
+                        <p data-translate="classicFrenchManicure">Classic French Manicure</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/46d9f41e-2b2c-45cd-b204-758a1784e6e3.jpg" alt="Gel Extension"
-                        loading="lazy">
+                    <img src="assets/images/gallery/46d9f41e-2b2c-45cd-b204-758a1784e6e3.jpg" alt="Gel Extension" loading="lazy">
                     <div class="gallery-overlay">
-                        <p>Gel Extension</p>
+                        <p data-translate="gelExtension">Gel Extension</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/5fe4b829-9240-4744-9b59-4a8edb5db852.jpg" alt="Artistic Design"
-                        loading="lazy">
+                    <img src="assets/images/gallery/5fe4b829-9240-4744-9b59-4a8edb5db852.jpg" alt="Artistic Design" loading="lazy">
                     <div class="gallery-overlay">
-                        <p>Artistic Design</p>
+                        <p data-translate="artisticDesign">Artistic Design</p>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/24c3387b-a486-4aa5-addf-228242bf0e49.jpg" alt="Luxury Stones"
-                        loading="lazy">
+                    <img src="assets/images/gallery/24c3387b-a486-4aa5-addf-228242bf0e49.jpg" alt="Luxury Stones" loading="lazy">
                     <div class="gallery-overlay">
-                        <p>Luxury Stones</p>
+                        <p data-translate="luxuryStones">Luxury Stones</p>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -303,14 +315,17 @@
 
     <footer>
         <div class="social-links">
-            <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://www.instagram.com/mimonails_luzern/" class="social-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/mimonailsluzern" class="social-link">
+                <i class="fab fa-facebook"></i>
+            </a>
         </div>
+        <p data-translate="followUs">Follow us on social media</p>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>

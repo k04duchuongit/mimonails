@@ -94,7 +94,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 2rem;
-  
+
 }
 
 .nav-link {
@@ -519,13 +519,17 @@ footer p {
 .language-switcher i {
     font-size: 1.2rem;
 }
+
 .main {
-    background-image: url(assets/images/background/background.png); /* hoặc .png tùy định dạng file */
+    background-image: url(assets/images/background/background.png);
+    /* hoặc .png tùy định dạng file */
 }
+
 .iframe-map {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* Tỷ lệ 16:9 */
+    padding-bottom: 56.25%;
+    /* Tỷ lệ 16:9 */
     border-radius: var(--border-radius-md);
     overflow: hidden;
     box-shadow: 0 10px 30px var(--primary-10);
@@ -559,11 +563,12 @@ footer p {
 .iframe-map:hover iframe {
     transform: scale(1.02);
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
-        height: auto;
-        padding: 1rem 0;
+        height: 150px;
+        padding-bottom: 0;
         position: fixed;
         transform: translateY(0);
     }
@@ -590,13 +595,13 @@ footer p {
     }
 
     .logo .img-logo {
-        height: 70px;
-        width: 140px;
+        height: 90px;
+        width: 180px;
     }
 
     .logo .img-logo img {
-        height: 70px;
-        width: 140px;
+        height: 90px;
+        width: 180px;
     }
 
     .logo p {
@@ -617,7 +622,8 @@ footer p {
 
     .content-section {
         padding: 2rem 1rem;
-        margin-top: 120px; /* Giảm margin-top cho mobile */
+        margin-top: 120px;
+        /* Giảm margin-top cho mobile */
     }
 
     .about-section {
@@ -660,11 +666,11 @@ footer p {
     .service-header {
         padding: 0.8rem;
     }
-    
+
     .service-header h3 {
         font-size: 1.1rem;
     }
-    
+
     .service-item {
         padding: 0.6rem 0.8rem;
     }
@@ -734,6 +740,10 @@ footer p {
 }
 
 @media (max-width: 480px) {
+    header {
+        padding-bottom: 0px;
+    }
+
     .logo .img-logo {
         font-size: 2rem;
     }

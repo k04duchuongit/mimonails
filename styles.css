@@ -1,3 +1,15 @@
+/* CSS Variables */
+:root {
+    --primary-color: #305F76;
+    --primary-light: #4a7d94;
+    --primary-dark: #234857;
+    --primary-30: rgba(48, 95, 118, 0.3);
+    --primary-20: rgba(48, 95, 118, 0.2);
+    --primary-10: rgba(48, 95, 118, 0.1);
+    --white: #ffffff;
+    --light-bg: #f5f5f5;
+}
+
 /* Reset CSS */
 * {
     margin: 0;
@@ -8,23 +20,23 @@
 body {
     font-family: 'Times New Roman', serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
+    color: var(--primary-color);
+    background-color: var(--light-bg);
 }
 
 /* Header Styles */
 header {
     text-align: center;
     padding: 1rem 0;
-    background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+    box-shadow: 0 2px 15px var(--primary-10);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
     height: 240px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid var(--primary-10);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,10 +55,10 @@ header {
 .logo .img-logo {
     font-weight: normal;
     letter-spacing: 2px;
-    background: linear-gradient(45deg, #333, #666);
+    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px var(--primary-10);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +73,7 @@ header {
 .logo p {
     font-size: 1.2rem;
     letter-spacing: 3px;
-    color: #666;
+    color: var(--primary-color);
     text-transform: uppercase;
     position: relative;
     display: inline-block;
@@ -75,7 +87,7 @@ header {
     transform: translateX(-50%);
     width: 50px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #333, transparent);
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
 }
 
 nav {
@@ -87,7 +99,7 @@ nav {
 
 .nav-link {
     text-decoration: none;
-    color: #333;
+    color: var(--primary-color);
     font-size: 0.9rem;
     letter-spacing: 1px;
     padding: 0.5rem 1rem;
@@ -104,7 +116,7 @@ nav {
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background: #333;
+    background: var(--primary-color);
     transition: width 0.3s ease;
 }
 
@@ -139,19 +151,18 @@ nav {
     display: inline-flex;
     align-items: center;
     padding: 1rem 3rem;
-    border: 1px solid #333;
+    border: 1px solid var(--primary-color);
     text-decoration: none;
-    color: #333;
+    color: var(--primary-color);
     font-size: 1.1rem;
     letter-spacing: 2px;
     transition: all 0.3s;
     border-radius: 2rem;
 }
 
-
 .book-button:hover {
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 .about-section {
@@ -163,7 +174,7 @@ nav {
 
 .about-content {
     font-size: 1rem;
-    color: #666;
+    color: var(--primary-light);
     line-height: 1.8;
 }
 
@@ -172,9 +183,9 @@ nav {
 }
 
 .get-in-touch {
-    color: #333;
+    color: var(--primary-color);
     text-decoration: none;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid var(--primary-color);
 }
 
 /* Pricelist Section Styles */
@@ -186,11 +197,11 @@ nav {
 /* Service Category Dropdown Styles */
 .service-category {
     margin-bottom: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--primary-20);
     border-radius: 8px;
     overflow: hidden;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: var(--white);
+    box-shadow: 0 2px 4px var(--primary-10);
 }
 
 .service-header {
@@ -199,17 +210,17 @@ nav {
     align-items: center;
     padding: 1rem;
     cursor: pointer;
-    background: #f8f8f8;
+    background: var(--primary-10);
     transition: background-color 0.3s ease;
 }
 
 .service-header:hover {
-    background: #f0f0f0;
+    background: var(--primary-20);
 }
 
 .service-header h3 {
     margin: 0;
-    color: #333;
+    color: var(--primary-color);
     font-size: 1.2rem;
 }
 
@@ -235,12 +246,12 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0.8rem 1rem;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--primary-10);
     transition: background-color 0.2s ease;
 }
 
 .service-item:hover {
-    background-color: #f8f8f8;
+    background-color: var(--primary-10);
 }
 
 .service-item:first-child {
@@ -248,12 +259,12 @@ nav {
 }
 
 .service-item span:first-child {
-    color: #666;
+    color: var(--primary-color);
 }
 
 .service-item span:last-child {
-    color: #333;
-    font-weight: 500;
+    color: var(--primary-light);
+    font-weight: bold;
 }
 
 /* Contact Section Styles */
@@ -266,7 +277,7 @@ nav {
 .contact-text {
     font-size: 1rem;
     line-height: 1.8;
-    color: #333;
+    color: var(--primary-color);
     margin-bottom: 3rem;
     padding: 0 1rem;
 }
@@ -290,12 +301,12 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--primary-10);
 }
 
 .hours-row span {
     font-size: 1rem;
-    color: #333;
+    color: var(--primary-color);
 }
 
 .contact-details {
@@ -307,13 +318,13 @@ nav {
 }
 
 .contact-details a {
-    color: #333;
+    color: var(--primary-color);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .contact-details a:hover {
-    color: #666;
+    color: var(--primary-light);
 }
 
 /* Gallery Section Styles */
@@ -330,7 +341,7 @@ nav {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--primary-10);
     aspect-ratio: 1;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -380,7 +391,7 @@ nav {
     padding: 2rem 0;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+    background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
     margin: 2rem 0;
     height: 300px;
     display: flex;
@@ -392,15 +403,15 @@ nav {
     width: 100%;
     object-fit: contain;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--primary-10);
 }
 
 /* Footer Styles */
 footer {
-    background-color: white;
+    background-color: var(--white);
     padding: 2rem 0;
     text-align: center;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 4px var(--primary-10);
 }
 
 .social-links {
@@ -417,22 +428,22 @@ footer {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid #ccc;
+    border: 2px solid var(--primary-10);
     text-decoration: none;
-    color: #333;
+    color: var(--primary-color);
     font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 
 .social-link:hover {
-    background-color: #333;
-    color: white;
-    border-color: #333;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
     transform: translateY(-3px);
 }
 
 footer p {
-    color: #666;
+    color: var(--primary-color);
     font-size: 0.9rem;
     letter-spacing: 1px;
 }
@@ -455,7 +466,7 @@ footer p {
 }
 
 .mobile-menu-btn i {
-    color: #333;
+    color: var(--primary-color);
 }
 
 /* Header Controls */
@@ -471,7 +482,7 @@ footer p {
 
 .language-switcher {
     background: none;
-    border: 2px solid #333;
+    border: 2px solid var(--primary-color);
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -485,8 +496,8 @@ footer p {
 }
 
 .language-switcher:hover {
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
 }
 
 .language-switcher .current-lang {
@@ -495,8 +506,8 @@ footer p {
     font-weight: bold;
     top: -8px;
     right: -8px;
-    background: #333;
-    color: white;
+    background: var(--primary-color);
+    color: var(--white);
     width: 20px;
     height: 20px;
     border-radius: 50%;

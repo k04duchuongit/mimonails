@@ -1,0 +1,10 @@
+# www.robotstxt.org/
+
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+
+# Sitemap
+Sitemap: https://mimonails.ch/sitemap.xml 

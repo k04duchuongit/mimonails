@@ -70,7 +70,7 @@ header {
 
 .logo .img-logo img {
     height: 120px;
-    width: 180px;
+    width: 300px;
     object-fit: contain;
 }
 
@@ -607,14 +607,11 @@ footer p {
         right: 0;
     }
 
-    .logo .img-logo {
-        height: 90px;
-        width: 180px;
-    }
+ 
 
     .logo .img-logo img {
         height: 90px;
-        width: 180px;
+        width: 200px;
     }
 
     .logo p {

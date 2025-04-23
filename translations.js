@@ -40,7 +40,7 @@ const translations = {
         changeColor: "Change Color",
         changeShape: "Change Shape",
         // Contact Section
-        contactText: "Do you have any questions or special requests? We are here for you! Contact our friendly team if you need information or would like to book an appointment. We will ensure that your experience at Glossify Studio is perfectly tailored to you. We look forward to hearing from you!",
+        contactText: "Do you have any questions or special requests? We are here for you! Contact our friendly team if you need information or would like to book an appointment. We will ensure that your experience at Mimonails is perfectly tailored to you. We look forward to hearing from you!",
         mondayWednesday: "Monday - Wednesday",
         saturday: "Saturday",
         thursday: "Thursday",
@@ -94,7 +94,7 @@ const translations = {
         changeColor: "Farbe ändern",
         changeShape: "Form ändern",
         // Contact Section
-        contactText: "Haben Sie Fragen oder besondere Wünsche? Wir sind für Sie da! Kontaktieren Sie unser freundliches Team, wenn Sie Informationen benötigen oder einen Termin buchen möchten. Wir stellen sicher, dass Ihr Erlebnis bei Glossify Studio perfekt auf Sie zugeschnitten ist. Wir freuen uns auf Ihre Nachricht!",
+        contactText: "Haben Sie Fragen oder besondere Wünsche? Wir sind für Sie da! Kontaktieren Sie unser freundliches Team, wenn Sie Informationen benötigen oder einen Termin buchen möchten. Wir stellen sicher, dass Ihr Erlebnis bei Mimonails perfekt auf Sie zugeschnitten ist. Wir freuen uns auf Ihre Nachricht!",
         mondayWednesday: "Montag - Mittwoch",
         thursday: "Donnerstag",
         saturday: "Samstag",

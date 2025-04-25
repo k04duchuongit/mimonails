@@ -31,7 +31,7 @@ body {
 header {
     text-align: center;
     padding: 1rem 0;
-    background: linear-gradient(135deg, var(--light-bg) 0%, var(--white) 100%);
+    background: white;
     box-shadow: 0 2px 15px var(--primary-10);
     position: fixed;
     top: 0;

@@ -1,5 +1,12 @@
 // Đợi cho DOM tải xong
 document.addEventListener('DOMContentLoaded', function() {
+    // Cập nhật năm hiện tại cho copyright
+    const copyrightElement = document.querySelector('[data-translate="copyright"]');
+    if (copyrightElement) {
+        const currentYear = new Date().getFullYear();
+        copyrightElement.innerHTML = copyrightElement.innerHTML.replace('2025', currentYear);
+    }
+
     // Lấy tất cả các link điều hướng
     const navLinks = document.querySelectorAll('.nav-link');
     // Lấy tất cả các section nội dung
@@ -165,4 +172,83 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // Gallery Slideshow
+    const galleryGrid = document.querySelector('.gallery-grid');
+    if (window.innerWidth <= 768) {
+        const slides = document.querySelectorAll('.gallery-item');
+        const dots = document.querySelectorAll('.slide-dot');
+        const prevBtn = document.querySelector('.slideshow-control.prev');
+        const nextBtn = document.querySelector('.slideshow-control.next');
+        let currentSlide = 0;
+        let slideInterval;
+
+        // Hàm hiển thị slide
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            currentSlide = index;
+        }
+
+        // Hàm chuyển đến slide tiếp theo
+        function nextSlide() {
+            let nextIndex = currentSlide + 1;
+            if (nextIndex >= slides.length) {
+                nextIndex = 0;
+            }
+            showSlide(nextIndex);
+        }
+
+        // Hàm chuyển đến slide trước đó
+        function prevSlide() {
+            let prevIndex = currentSlide - 1;
+            if (prevIndex < 0) {
+                prevIndex = slides.length - 1;
+            }
+            showSlide(prevIndex);
+        }
+
+        // Tự động chuyển slide mỗi 3 giây
+        function startSlideshow() {
+            slideInterval = setInterval(nextSlide, 3000);
+        }
+
+        // Dừng slideshow
+        function stopSlideshow() {
+            clearInterval(slideInterval);
+        }
+
+        // Xử lý sự kiện click cho nút điều khiển
+        nextBtn.addEventListener('click', () => {
+            stopSlideshow();
+            nextSlide();
+            startSlideshow();
+        });
+
+        prevBtn.addEventListener('click', () => {
+            stopSlideshow();
+            prevSlide();
+            startSlideshow();
+        });
+
+        // Xử lý sự kiện click cho dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                stopSlideshow();
+                showSlide(index);
+                startSlideshow();
+            });
+        });
+
+        // Dừng slideshow khi hover
+        galleryGrid.addEventListener('mouseenter', stopSlideshow);
+        galleryGrid.addEventListener('mouseleave', startSlideshow);
+
+        // Bắt đầu slideshow
+        startSlideshow();
+    }
 });

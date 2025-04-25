@@ -689,8 +689,91 @@ footer p {
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1rem;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        height: 300px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .gallery-item {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        flex: 0 0 100%;
+    }
+
+    .gallery-item.active {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Slideshow Navigation */
+    .slideshow-nav {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 2;
+    }
+
+    .slide-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--white);
+        opacity: 0.5;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+    }
+
+    .slide-dot.active {
+        opacity: 1;
+        background: var(--primary-color);
+    }
+
+    /* Slideshow Controls */
+    .slideshow-controls {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        z-index: 2;
+    }
+
+    .slideshow-control {
+        background: rgba(255, 255, 255, 0.5);
+        color: var(--primary-color);
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        transition: background 0.3s ease;
+    }
+
+    .slideshow-control:hover {
+        background: rgba(255, 255, 255, 0.8);
     }
 
     .header-controls {
@@ -796,9 +879,8 @@ footer p {
         max-width: 200px;
     }
 
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 0.8rem;
+    .gallery-item {
+        flex: 0 0 90%;
     }
 
     .gallery-overlay p {

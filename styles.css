@@ -468,7 +468,9 @@ footer p {
     top: 1rem;
     z-index: 1001;
 }
-
+.slideshow-controls{
+    display: none;
+}
 .mobile-menu-btn i {
     color: var(--primary-color);
 }

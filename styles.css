@@ -24,11 +24,22 @@ body {
     line-height: 1.6;
     color: var(--primary-color);
     background-color: var(--light-bg);
-    /* Đặt ảnh nền trực tiếp cho body để tối ưu hiệu suất cuộn */
+    /* Nền tách riêng thành layer fixed để không bị "giãn" khi nội dung thay đổi chiều cao */
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
     background-image: url(assets/images/background/back2.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: -1;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 /* Header Styles */
@@ -243,11 +254,13 @@ nav {
 .service-content {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
+    transition: max-height 0.25s ease;
+    will-change: max-height;
 }
 
 .service-category.active .service-content {
-    max-height: 500px;
+    /* max-height sẽ được set bằng JS theo đúng scrollHeight để không bị giật/cắt nội dung */
+    max-height: none;
 }
 
 .service-item {

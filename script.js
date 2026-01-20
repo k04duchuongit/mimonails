@@ -159,17 +159,32 @@ document.addEventListener('DOMContentLoaded', function() {
     
     serviceCategories.forEach(category => {
         const header = category.querySelector('.service-header');
+        const content = category.querySelector('.service-content');
         
         header.addEventListener('click', () => {
-            // Bật/tắt trạng thái active khi click vào danh mục
-            category.classList.toggle('active');
-            
-            // Đóng các danh mục khác nếu có
+            const isOpening = !category.classList.contains('active');
+
+            // Đóng các danh mục khác (và reset chiều cao để animation mượt)
             serviceCategories.forEach(otherCategory => {
                 if (otherCategory !== category) {
                     otherCategory.classList.remove('active');
+                    const otherContent = otherCategory.querySelector('.service-content');
+                    if (otherContent) otherContent.style.maxHeight = '0px';
                 }
             });
+
+            // Toggle danh mục hiện tại
+            category.classList.toggle('active');
+
+            // Animate bằng scrollHeight để không bị hardcode 500px
+            if (content) {
+                if (isOpening) {
+                    // đặt maxHeight theo đúng chiều cao thật
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = '0px';
+                }
+            }
         });
     });
 

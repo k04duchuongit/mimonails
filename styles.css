@@ -24,7 +24,11 @@ body {
     line-height: 1.6;
     color: var(--primary-color);
     background-color: var(--light-bg);
-
+    /* Đặt ảnh nền trực tiếp cho body để tối ưu hiệu suất cuộn */
+    background-image: url(assets/images/background/back2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Header Styles */
@@ -525,20 +529,7 @@ footer p {
 
 .main {
     position: relative;
-    overflow: hidden;
     z-index: 0;
-    
-}
-.main::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-image: url(assets/images/background/back2.png);
-    background-size: cover;
-    background-position: center;
-    filter: blur(5px); /* Điều chỉnh độ mờ */
-    z-index: -1;
 }
 .iframe-map {
     position: relative;

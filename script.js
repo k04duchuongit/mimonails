@@ -37,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.documentElement.lang = lang;
     }
 
+    // Apply the initial language on load so price labels/texts update immediately
+    updateLanguage(currentLang);
+
     // Chuyển đổi ngôn ngữ khi click
     languageSwitcher.addEventListener('click', function() {
         currentLang = currentLang === 'en' ? 'de' : 'en';

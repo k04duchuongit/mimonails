@@ -1,11 +1,14 @@
 /* CSS Variables */
 :root {
-    --primary-color: #8F0210;
+    --primary-color: #8a5700;
     --primary-light: #a81a27;
     --primary-dark: #6d0008;
     --primary-30: rgba(143, 2, 16, 0.3);
-    --primary-20: rgba(143, 2, 16, 0.2);
-    --primary-10: rgba(143, 2, 16, 0.1);
+    /* --primary-20: rgba(142, 6, 20, 0.2); */
+    /* --primary-10: rgba(143, 2, 16, 0.1); */
+    --primary-20: rgba(138, 87, 0, 0.2);
+    --primary-10: rgba(138, 87, 0, 0.1);
+
     --white: #ffffff;
     --light-bg: #f5f5f5;
     --font-primary: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -33,7 +36,7 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-image: url(assets/images/background/back2.png);
+    background-image: url(assets/images/background/back3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -104,7 +107,7 @@ header {
     bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
+    width: 186px;
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
 }
@@ -193,7 +196,7 @@ nav {
 
 .about-content {
     font-size: 1rem;
-    color: var(--primary-light);
+    color: var(--primary-color);
     line-height: 1.8;
 }
 
@@ -284,7 +287,7 @@ nav {
 }
 
 .service-item span:last-child {
-    color: var(--primary-light);
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -485,9 +488,11 @@ footer p {
     top: 1rem;
     z-index: 1001;
 }
-.slideshow-controls{
+
+.slideshow-controls {
     display: none;
 }
+
 .mobile-menu-btn i {
     color: var(--primary-color);
 }
@@ -544,6 +549,7 @@ footer p {
     position: relative;
     z-index: 0;
 }
+
 .iframe-map {
     position: relative;
     width: 100%;
@@ -613,7 +619,7 @@ footer p {
         right: 0;
     }
 
- 
+
 
     .logo .img-logo img {
         height: 90px;
@@ -641,7 +647,8 @@ footer p {
         margin-top: 120px;
         /* Giảm margin-top cho mobile */
     }
-    .main>.content-section-top-mobile{
+
+    .main>.content-section-top-mobile {
         margin-top: 160px;
     }
 

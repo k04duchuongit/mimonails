@@ -1,6 +1,6 @@
 /* CSS Variables */
 :root {
-    --primary-color: #8a5700;
+    --primary-color: #8e7a54;
     --primary-light: #a81a27;
     --primary-dark: #6d0008;
     --primary-30: rgba(143, 2, 16, 0.3);
@@ -211,7 +211,7 @@ nav {
     text-align: center;
     font-weight: normal;
     letter-spacing: 2px;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.75rem;
 }
 
 /* Home Section Styles */

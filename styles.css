@@ -1,19 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 /* CSS Variables */
 :root {
-    --primary-color: #626566;
-    --primary-light: #9b8c82;
-    --primary-dark: #4c4d4d;
-    --primary-30: rgba(98, 101, 102, 0.3);
-    --primary-20: rgba(98, 101, 102, 0.2);
-    --primary-10: rgba(98, 101, 102, 0.1);
+    --primary-color: #85817b;
+    --primary-light: #dad6ce;
+    --primary-dark: #45433f;
+    --primary-30: rgba(133, 129, 123, 0.3);
+    --primary-20: rgba(133, 129, 123, 0.2);
+    --primary-10: rgba(133, 129, 123, 0.1);
 
-    --white: #faf9f7;
-    --light-bg: #dadadd;
+    --white: #f8f6f2;
+    --light-bg: #eeebe5;
     --border-radius-md: 8px;
     --spacing-md: 1rem;
     --transition-normal: 0.3s ease;
-    --font-primary: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    --font-secondary: Arial, sans-serif;
+    --font-primary: 'Montserrat', 'Avenir Next', 'Century Gothic', sans-serif;
+    --font-secondary: 'Montserrat', 'Avenir Next', 'Century Gothic', sans-serif;
 }
 
 /* Reset CSS */
@@ -37,7 +39,7 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background-image: url(assets/images/background/bg4.jpg);
+    background-image: url(assets/images/background/bg4.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -444,7 +446,7 @@ nav {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(76, 77, 77, 0.88);
+    background: rgba(69, 67, 63, 0.88);
     color: var(--white);
     padding: 1rem;
     transform: translateY(100%);
@@ -511,7 +513,7 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 4.5rem 1rem 1rem;
-    background: rgba(76, 77, 77, 0.94);
+    background: rgba(69, 67, 63, 0.94);
 }
 
 .lightbox-image {
@@ -522,7 +524,7 @@ nav {
     max-height: calc(100vh - 5.5rem);
     object-fit: contain;
     border-radius: 6px;
-    box-shadow: 0 12px 40px rgba(76, 77, 77, 0.35);
+    box-shadow: 0 12px 40px rgba(69, 67, 63, 0.35);
 }
 
 .lightbox-close {
@@ -954,7 +956,7 @@ footer p {
     }
 
     .slideshow-control {
-        background: rgba(250, 249, 247, 0.5);
+        background: rgba(248, 246, 242, 0.5);
         color: var(--primary-color);
         border: none;
         width: 40px;
@@ -969,7 +971,7 @@ footer p {
     }
 
     .slideshow-control:hover {
-        background: rgba(250, 249, 247, 0.8);
+        background: rgba(248, 246, 242, 0.8);
     }
 
     .header-controls {

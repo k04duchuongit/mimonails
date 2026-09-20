@@ -2,15 +2,19 @@
 
 /* CSS Variables */
 :root {
-    --primary-color: #85817b;
-    --primary-light: #dad6ce;
-    --primary-dark: #45433f;
-    --primary-30: rgba(133, 129, 123, 0.3);
-    --primary-20: rgba(133, 129, 123, 0.2);
-    --primary-10: rgba(133, 129, 123, 0.1);
+    --primary-color: #3f3935;
+    --primary-light: #9b8c82;
+    --primary-dark: #3f3935;
+    --body-text: #625a54;
+    --primary-accent: #b7a99d;
+    --secondary-accent: #c2b8b0;
+    --border-color: #d1cbc5;
+    --primary-30: rgba(63, 57, 53, 0.3);
+    --primary-20: rgba(63, 57, 53, 0.2);
+    --primary-10: rgba(63, 57, 53, 0.1);
 
-    --white: #f8f6f2;
-    --light-bg: #eeebe5;
+    --white: #f7f3ed;
+    --light-bg: #efe9e2;
     --border-radius-md: 8px;
     --spacing-md: 1rem;
     --transition-normal: 0.3s ease;
@@ -28,7 +32,7 @@
 body {
     font-family: var(--font-primary);
     line-height: 1.6;
-    color: var(--primary-color);
+    color: var(--body-text);
     background-color: var(--light-bg);
     /* Nền tách riêng thành layer fixed để không bị "giãn" khi nội dung thay đổi chiều cao */
     position: relative;
@@ -80,7 +84,7 @@ header {
     display: flex;
     align-items: center;
     color: var(--white);
-    background: var(--primary-color);
+    background: var(--primary-accent);
     white-space: nowrap;
 }
 
@@ -228,9 +232,10 @@ nav {
     display: inline-flex;
     align-items: center;
     padding: 1rem 3rem;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--primary-accent);
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--white);
+    background: var(--primary-accent);
     font-size: 1.1rem;
     letter-spacing: 2px;
     transition: all 0.3s;
@@ -238,7 +243,7 @@ nav {
 }
 
 .book-button:hover {
-    background-color: var(--primary-color);
+    background-color: var(--primary-dark);
     color: var(--white);
 }
 
@@ -251,7 +256,7 @@ nav {
 
 .about-content {
     font-size: 1rem;
-    color: var(--primary-color);
+    color: var(--body-text);
     line-height: 1.8;
 }
 
@@ -274,7 +279,7 @@ nav {
 /* Service Category Dropdown Styles */
 .service-category {
     margin-bottom: 1rem;
-    border: 1px solid var(--primary-20);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     overflow: hidden;
     background: var(--white);
@@ -338,7 +343,7 @@ nav {
 }
 
 .service-item span:first-child {
-    color: var(--primary-color);
+    color: var(--body-text);
 }
 
 .service-item span:last-child {
@@ -356,7 +361,7 @@ nav {
 .contact-text {
     font-size: 1rem;
     line-height: 1.8;
-    color: var(--primary-color);
+    color: var(--body-text);
     margin-bottom: 3rem;
     padding: 0 1rem;
 }
@@ -380,12 +385,12 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 0;
-    border-bottom: 1px solid var(--primary-10);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .hours-row span {
     font-size: 1rem;
-    color: var(--primary-color);
+    color: var(--body-text);
 }
 
 .contact-details {
@@ -397,7 +402,7 @@ nav {
 }
 
 .contact-details a {
-    color: var(--primary-color);
+    color: var(--body-text);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -446,7 +451,7 @@ nav {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(69, 67, 63, 0.88);
+    background: rgba(47, 42, 39, 0.88);
     color: var(--white);
     padding: 1rem;
     transform: translateY(100%);
@@ -513,7 +518,7 @@ nav {
     align-items: center;
     justify-content: center;
     padding: 4.5rem 1rem 1rem;
-    background: rgba(69, 67, 63, 0.94);
+    background: rgba(47, 42, 39, 0.94);
 }
 
 .lightbox-image {
@@ -524,7 +529,7 @@ nav {
     max-height: calc(100vh - 5.5rem);
     object-fit: contain;
     border-radius: 6px;
-    box-shadow: 0 12px 40px rgba(69, 67, 63, 0.35);
+    box-shadow: 0 12px 40px rgba(47, 42, 39, 0.35);
 }
 
 .lightbox-close {
@@ -594,7 +599,7 @@ footer {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 2px solid var(--primary-10);
+    border: 2px solid var(--border-color);
     text-decoration: none;
     color: var(--primary-color);
     font-size: 1.5rem;
@@ -609,7 +614,7 @@ footer {
 }
 
 footer p {
-    color: var(--primary-color);
+    color: var(--body-text);
     font-size: 0.9rem;
     letter-spacing: 1px;
 }
@@ -956,7 +961,7 @@ footer p {
     }
 
     .slideshow-control {
-        background: rgba(248, 246, 242, 0.5);
+        background: rgba(247, 243, 237, 0.5);
         color: var(--primary-color);
         border: none;
         width: 40px;
@@ -971,7 +976,7 @@ footer p {
     }
 
     .slideshow-control:hover {
-        background: rgba(248, 246, 242, 0.8);
+        background: rgba(247, 243, 237, 0.8);
     }
 
     .header-controls {

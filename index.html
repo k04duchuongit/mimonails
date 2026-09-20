@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Mimonails by Pucha - Nail Salon in Luzern</title>
     <link rel="stylesheet" href="styles.css">
     <title>Mimonails by Pucha - Nail Salon in Luzern</title>
@@ -41,15 +41,16 @@
         </nav>
         <div class="announcement-bar" role="status" aria-label="Location announcement">
             <div class="announcement-track">
-                <span>We’re moving! From 22 September 2026, find us at our new location: Hertensteinstrasse 29, 6004
+                <span data-translate="movingAnnouncement">We’re moving! From 22 September 2026, find us at our new location: Hertensteinstrasse 29, 6004
                     Lucerne – Passage Zum Stein. Only 230 m from our previous studio. We can’t wait to welcome you to
                     our new home!</span>
-                <span aria-hidden="true">We’re moving! From 22 September 2026, find us at our new location:
+                <span aria-hidden="true" data-translate="movingAnnouncement">We’re moving! From 22 September 2026, find us at our new location:
                     Hertensteinstrasse 29, 6004 Lucerne – Passage Zum Stein. Only 230 m from our previous studio. We
                     can’t wait to welcome you to our new home!</span>
             </div>
         </div>
     </header>
+
 
 
 
@@ -229,8 +230,7 @@
 
                 <div class="contact-details">
                     <p><span data-translate="address">Address</span>: <a
-                            href="https://www.google.com/maps/place/Eisengasse+13,+6004+Luzern/@47.05278,8.306132,2902m/data=!3m1!1e3!4m6!3m5!1s0x478ffb9ee45f7ae9:0xa11c833859b11ef5!8m2!3d47.0527804!4d8.3061319!16s%2Fg%2F11c1x7r2nm?hl=sk&entry=ttu&g_ep=EgoyMDI1MDMxNi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
-                            target="_blank">Eisengasse 13, 6004 Luzern</a></p>
+                            href="https://maps.app.goo.gl/u99Li9pWNhiKbu2VA">Hertensteinstrasse 29, 6004 Luzern</a></p>
                     <p><span data-translate="phone">Phone</span>: <a href="tel:+044 599 27 89">+41 44 599 27 89</a></p>
                 </div>
                 <div class="opening-hours">
@@ -351,40 +351,38 @@
 
         <div class="iframe-map">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13379.43013908892!2d8.306132!3d47.05278!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ffb9ee45f7ae9%3A0xa11c833859b11ef5!2sEisengasse%2013%2C%206004%20Luzern%2C%20%C5%A0vaj%C4%8Diarsko!5e1!3m2!1ssk!2s!4v1743101686898!5m2!1ssk!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14616.410301442274!2d8.297536087601207!3d47.053141017200495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ffb9eae83176d%3A0x9ffca1508d96bc78!2sHertensteinstrasse%2029%2C%206004%20Luzern%2C%20Th%E1%BB%A5y%20S%C4%A9!5e1!3m2!1svi!2s!4v1789898153151!5m2!1svi!2s"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        </main>
+                referrerpolicy="strict-origin-when-cross-origin"></iframe> </main>
 
-        <footer>
-            <div class="social-links">
-                <a href="https://www.instagram.com/mimonails.lu" target="_blank" class="social-link">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.facebook.com/mimonails.lu" target="_blank" class="social-link">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.tiktok.com/@mimonails.lu" target="_blank" class="social-link">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-                <a href="tel:+41445992789" class="social-link">
-                    <i class="fas fa-phone"></i>
-                </a>
+            <footer>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/mimonails.lu" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/mimonails.lu" target="_blank" class="social-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@mimonails.lu" target="_blank" class="social-link">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="tel:+41445992789" class="social-link">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+                <p data-translate="followUs">Follow us on social media</p>
+                <p data-translate="copyright">Copyright © 2025 Mimonails. All rights reserved.</p>
+            </footer>
+
+            <div class="image-lightbox" role="dialog" aria-modal="true" aria-label="Expanded image" hidden>
+                <button class="lightbox-close" type="button" aria-label="Close image">
+                    <i class="fas fa-times"></i>
+                </button>
+                <img class="lightbox-image" src="" alt="">
             </div>
-            <p data-translate="followUs">Follow us on social media</p>
-            <p data-translate="copyright">Copyright © 2025 Mimonails. All rights reserved.</p>
-        </footer>
 
-        <div class="image-lightbox" role="dialog" aria-modal="true" aria-label="Expanded image" hidden>
-            <button class="lightbox-close" type="button" aria-label="Close image">
-                <i class="fas fa-times"></i>
-            </button>
-            <img class="lightbox-image" src="" alt="">
-        </div>
-
-        <script src="translations.js"></script>
-        <script src="script.js"></script>
+            <script src="translations.js"></script>
+            <script src="script.js"></script>
 </body>
 
 </html>

@@ -56,7 +56,7 @@ header {
     left: 0;
     right: 0;
     z-index: 1000;
-    height: 240px;
+    height: 220px;
     border-bottom: 1px solid var(--primary-10);
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@ header {
 
 .announcement-bar {
     position: absolute;
-    top: 240px;
+    bottom: -38px;
     left: 0;
     right: 0;
     z-index: 999;
@@ -112,11 +112,12 @@ header {
 }
 
 .logo {
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: margin-bottom 0.3s ease;
 }
 
 .logo .img-logo {
@@ -133,19 +134,21 @@ header {
 }
 
 .logo .img-logo img {
-    height: 120px;
-    width: 300px;
+    height: 112px;
+    width: 280px;
     object-fit: contain;
+    transition: width 0.3s ease, height 0.3s ease;
 
 }
 
 .logo p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     letter-spacing: 3px;
     color: var(--primary-color);
     text-transform: uppercase;
     position: relative;
     display: inline-block;
+    transition: font-size 0.3s ease;
 }
 
 .logo p::after {
@@ -162,7 +165,8 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.75rem;
+    transition: gap 0.3s ease;
 
 }
 
@@ -172,7 +176,7 @@ nav {
     font-size: 0.9rem;
     letter-spacing: 1px;
     padding: 0.5rem 1rem;
-    transition: all 0.3s;
+    transition: padding 0.3s ease;
     position: relative;
     text-transform: uppercase;
 }
@@ -196,7 +200,7 @@ nav {
 
 /* Content Section Styles */
 .content-section {
-    padding: 4rem 1rem 4rem;
+    padding: 3rem 1rem 4rem;
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 200px;
@@ -207,13 +211,13 @@ nav {
     text-align: center;
     font-weight: normal;
     letter-spacing: 2px;
-    margin-bottom: 3rem;
+    margin-bottom: 0.75rem;
 }
 
 /* Home Section Styles */
 .book-section {
     text-align: center;
-    padding: 1rem 0;
+    padding: 3rem 0 0 0;
 }
 
 .book-button {
@@ -640,6 +644,7 @@ footer p {
     align-items: center;
     gap: 1rem;
     z-index: 1001;
+    transition: transform 0.3s ease;
 }
 
 .language-switcher {
@@ -740,6 +745,11 @@ footer p {
 }
 
 @media (max-width: 768px) {
+    html,
+    body {
+        touch-action: pan-x pan-y;
+    }
+
     header {
         height: 150px;
         padding-bottom: 0;
@@ -748,8 +758,8 @@ footer p {
     }
 
     .announcement-bar {
-        top: 150px;
         height: 34px;
+        bottom: -34px;
     }
 
     .announcement-track span {
@@ -1095,16 +1105,34 @@ footer p {
 @media (min-width: 769px) {
     header.header-scrolled {
         height: 180px;
-        padding: 0.5rem 0;
+        padding: 0.75rem 0;
     }
 
     header.header-scrolled .logo {
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.75rem;
     }
 
     header.header-scrolled .logo .img-logo img {
         width: 225px;
         height: 90px;
+    }
+
+    header.header-scrolled .logo p {
+        font-size: 0.9rem;
+        letter-spacing: 2.25px;
+    }
+
+    header.header-scrolled .logo p::after {
+        width: 140px;
+    }
+
+    header.header-scrolled nav {
+        gap: 1.5rem;
+    }
+
+    header.header-scrolled .header-controls {
+        transform: scale(0.85);
+        transform-origin: top right;
     }
 
     header.header-scrolled .nav-link {

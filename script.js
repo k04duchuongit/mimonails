@@ -165,15 +165,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightboxImage = document.querySelector('.lightbox-image');
     const lightboxClose = document.querySelector('.lightbox-close');
     const zoomableImages = document.querySelectorAll('.gallery-item img, .zoomable-image');
+    const galleryImages = Array.from(document.querySelectorAll('.gallery-item img'));
     const detailImages = Array.from(document.querySelectorAll('.detail-card img'));
-    let detailImageIndex = 0;
-    let isDetailLightbox = false;
+    let activeImageList = [];
+    let activeImageIndex = 0;
     let touchStartX = 0;
     let touchEndX = 0;
 
-    function showDetailImage(index) {
-        detailImageIndex = (index + detailImages.length) % detailImages.length;
-        const image = detailImages[detailImageIndex];
+    function showImage(index) {
+        activeImageIndex = (index + activeImageList.length) % activeImageList.length;
+        const image = activeImageList[activeImageIndex];
         lightboxImage.src = image.src;
         lightboxImage.alt = image.alt;
     }
@@ -181,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function closeLightbox() {
         lightbox.hidden = true;
         lightboxImage.src = '';
-        isDetailLightbox = false;
+        activeImageList = [];
         document.body.classList.remove('lightbox-open');
     }
 
@@ -189,13 +190,17 @@ document.addEventListener('DOMContentLoaded', function() {
         imageTarget.addEventListener('click', () => {
             const image = imageTarget.tagName === 'IMG' ? imageTarget : imageTarget.querySelector('img');
             const selectedDetailIndex = detailImages.indexOf(image);
+            const selectedGalleryIndex = galleryImages.indexOf(image);
             if (selectedDetailIndex !== -1) {
-                showDetailImage(selectedDetailIndex);
-                isDetailLightbox = true;
+                activeImageList = detailImages;
+                showImage(selectedDetailIndex);
+            } else if (selectedGalleryIndex !== -1) {
+                activeImageList = galleryImages;
+                showImage(selectedGalleryIndex);
             } else {
                 lightboxImage.src = image.src;
                 lightboxImage.alt = image.alt;
-                isDetailLightbox = false;
+                activeImageList = [];
             }
             lightbox.hidden = false;
             document.body.classList.add('lightbox-open');
@@ -203,12 +208,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    function handleDetailSwipe() {
+    function handleImageSwipe() {
         const swipeDistance = touchEndX - touchStartX;
         if (Math.abs(swipeDistance) < 40) {
             return;
         }
-        showDetailImage(detailImageIndex + (swipeDistance < 0 ? 1 : -1));
+        showImage(activeImageIndex + (swipeDistance < 0 ? 1 : -1));
     }
 
     lightbox.addEventListener('touchstart', event => {
@@ -217,8 +222,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     lightbox.addEventListener('touchend', event => {
         touchEndX = event.changedTouches[0].screenX;
-        if (isDetailLightbox) {
-            handleDetailSwipe();
+        if (activeImageList.length) {
+            handleImageSwipe();
         }
     }, { passive: true });
 
@@ -231,8 +236,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('keydown', event => {
         if (event.key === 'Escape' && !lightbox.hidden) {
             closeLightbox();
-        } else if (!lightbox.hidden && isDetailLightbox && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
-            showDetailImage(detailImageIndex + (event.key === 'ArrowRight' ? 1 : -1));
+        } else if (!lightbox.hidden && activeImageList.length && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
+            showImage(activeImageIndex + (event.key === 'ArrowRight' ? 1 : -1));
         }
     });
 

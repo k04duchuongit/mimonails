@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 header.style.transform = 'translateY(0)';
             }
         } else {
-            // Reset header về vị trí mặc định trên desktop
+            header.classList.toggle('header-scrolled', currentScrollTop > scrollThreshold);
             header.style.transform = 'translateY(0)';
         }
 
@@ -130,6 +130,9 @@ document.addEventListener('DOMContentLoaded', function() {
         setActiveLink();
         // Reset lại vị trí header khi thay đổi kích thước
         header.style.transform = 'translateY(0)';
+        if (window.innerWidth <= 768) {
+            header.classList.remove('header-scrolled');
+        }
     });
     
     // Đặt trạng thái active ban đầu cho menu item
@@ -154,6 +157,82 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(event) {
         if (!navMenu.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
             navMenu.classList.remove('active');
+        }
+    });
+
+    // Mở ảnh lớn cho Gallery và Details
+    const lightbox = document.querySelector('.image-lightbox');
+    const lightboxImage = document.querySelector('.lightbox-image');
+    const lightboxClose = document.querySelector('.lightbox-close');
+    const zoomableImages = document.querySelectorAll('.gallery-item img, .zoomable-image');
+    const detailImages = Array.from(document.querySelectorAll('.detail-card img'));
+    let detailImageIndex = 0;
+    let isDetailLightbox = false;
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    function showDetailImage(index) {
+        detailImageIndex = (index + detailImages.length) % detailImages.length;
+        const image = detailImages[detailImageIndex];
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+    }
+
+    function closeLightbox() {
+        lightbox.hidden = true;
+        lightboxImage.src = '';
+        isDetailLightbox = false;
+        document.body.classList.remove('lightbox-open');
+    }
+
+    zoomableImages.forEach(imageTarget => {
+        imageTarget.addEventListener('click', () => {
+            const image = imageTarget.tagName === 'IMG' ? imageTarget : imageTarget.querySelector('img');
+            const selectedDetailIndex = detailImages.indexOf(image);
+            if (selectedDetailIndex !== -1) {
+                showDetailImage(selectedDetailIndex);
+                isDetailLightbox = true;
+            } else {
+                lightboxImage.src = image.src;
+                lightboxImage.alt = image.alt;
+                isDetailLightbox = false;
+            }
+            lightbox.hidden = false;
+            document.body.classList.add('lightbox-open');
+            lightboxClose.focus();
+        });
+    });
+
+    function handleDetailSwipe() {
+        const swipeDistance = touchEndX - touchStartX;
+        if (Math.abs(swipeDistance) < 40) {
+            return;
+        }
+        showDetailImage(detailImageIndex + (swipeDistance < 0 ? 1 : -1));
+    }
+
+    lightbox.addEventListener('touchstart', event => {
+        touchStartX = event.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', event => {
+        touchEndX = event.changedTouches[0].screenX;
+        if (isDetailLightbox) {
+            handleDetailSwipe();
+        }
+    }, { passive: true });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', event => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && !lightbox.hidden) {
+            closeLightbox();
+        } else if (!lightbox.hidden && isDetailLightbox && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
+            showDetailImage(detailImageIndex + (event.key === 'ArrowRight' ? 1 : -1));
         }
     });
 

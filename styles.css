@@ -2,16 +2,16 @@
 
 /* CSS Variables */
 :root {
-    --primary-color: #3f3935;
+    --primary-color: #625a54;
     --primary-light: #9b8c82;
     --primary-dark: #3f3935;
     --body-text: #625a54;
     --primary-accent: #b7a99d;
     --secondary-accent: #c2b8b0;
     --border-color: #d1cbc5;
-    --primary-30: rgba(63, 57, 53, 0.3);
-    --primary-20: rgba(63, 57, 53, 0.2);
-    --primary-10: rgba(63, 57, 53, 0.1);
+    --primary-30: rgba(98, 90, 84, 0.3);
+    --primary-20: rgba(98, 90, 84, 0.2);
+    --primary-10: rgba(98, 90, 84, 0.1);
 
     --white: #f7f3ed;
     --light-bg: #efe9e2;
@@ -579,6 +579,10 @@ body.lightbox-open {
 
 /* Footer Styles */
 footer {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
     background-color: var(--white);
     padding: 2rem 0;
     text-align: center;
@@ -705,7 +709,7 @@ footer p {
     border-radius: var(--border-radius-md);
     overflow: hidden;
     box-shadow: 0 10px 30px var(--primary-10);
-    margin: var(--spacing-md) 0;
+  
 }
 
 .iframe-map::before {
